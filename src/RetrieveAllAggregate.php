@@ -26,7 +26,7 @@ final class RetrieveAllAggregate
     public function __invoke(Request $request): ResponseFactory
     {
         $validator = $this->validation->make($request->all(), [
-            'stream_name' => 'required|string',
+            'stream_name'  => 'required|string',
             'aggregate_id' => 'required|string|uuid',
         ]);
 

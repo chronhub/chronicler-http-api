@@ -14,11 +14,11 @@ final class RetrieveFromToVersionAggregate extends RetrieveWithQueryFilter
     protected function makeValidator(Request $request): Validator
     {
         return $this->validation->make($request->all(), [
-            'stream_name' => 'required|string',
+            'stream_name'  => 'required|string',
             'aggregate_id' => 'required|string|uuid',
-            'from' => 'required|integer|min:0|not_in:0',
-            'to' => 'required|integer|gt:from',
-            'direction' => 'required|string|in:asc,desc',
+            'from'         => 'required|integer|min:0|not_in:0',
+            'to'           => 'required|integer|gt:from',
+            'direction'    => 'required|string|in:asc,desc',
         ]);
     }
 

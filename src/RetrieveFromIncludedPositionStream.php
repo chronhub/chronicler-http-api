@@ -15,7 +15,7 @@ final class RetrieveFromIncludedPositionStream extends RetrieveWithQueryFilter
     {
         return $this->validation->make($request->all(), [
             'stream_name' => 'required|string',
-            'position' => 'required|integer|min:0|not_in:0',
+            'position'    => 'required|integer|min:0|not_in:0',
         ]);
     }
 

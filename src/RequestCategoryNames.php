@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use Chronhub\Chronicler\Chronicler;
 use Illuminate\Contracts\Validation\Factory;
 use Chronhub\Chronicler\Http\Api\Response\ResponseFactory;
+use function explode;
+use function array_filter;
 
 final class RequestCategoryNames
 {

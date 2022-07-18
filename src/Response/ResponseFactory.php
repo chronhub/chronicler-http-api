@@ -81,9 +81,9 @@ final class ResponseFactory implements Responsable
     private function metadata(): array
     {
         return [
-            'http_status' => $this->status.', '.Response::$statusTexts[$this->status],
+            'http_status'   => $this->status.', '.Response::$statusTexts[$this->status],
             'log_reference' => 'todo',
-            'links' => ['todo'],
+            'links'         => ['todo'],
         ];
     }
 }

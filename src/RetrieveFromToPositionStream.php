@@ -15,9 +15,9 @@ final class RetrieveFromToPositionStream extends RetrieveWithQueryFilter
     {
         return $this->validation->make($request->all(), [
             'stream_name' => 'required|string',
-            'from' => 'required|integer|min:0|not_in:0',
-            'to' => 'required|integer|gt:from',
-            'direction' => 'required|string|in:asc,desc',
+            'from'        => 'required|integer|min:0|not_in:0',
+            'to'          => 'required|integer|gt:from',
+            'direction'   => 'required|string|in:asc,desc',
         ]);
     }
 

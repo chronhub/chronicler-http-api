@@ -40,7 +40,7 @@ final class DeleteProjection
     {
         return $this->validation->make($request->all(), [
             'projection_name' => 'required|string',
-            'include_events' => 'required|boolean',
+            'include_events'  => 'required|boolean',
         ]);
     }
 }

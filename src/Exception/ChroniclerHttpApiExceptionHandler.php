@@ -38,7 +38,7 @@ final class ChroniclerHttpApiExceptionHandler
     {
         return match ($exception::class) {
             AuthenticationException::class => 401,
-            AuthorizationException::class => 403,
+            AuthorizationException::class  => 403,
             ProjectionNotFound::class, StreamNotFound::class => 404,
             default => 500
         };
@@ -50,11 +50,11 @@ final class ChroniclerHttpApiExceptionHandler
 
         return [
             'debug' => [
-                'message' => $exception->getMessage(),
+                'message'   => $exception->getMessage(),
                 'exception' => $exception::class,
-                'file' => $exception->getFile(),
-                'line' => $exception->getLine(),
-                'trace' => $trace->map(fn (array $trace): array => Arr::except($trace, ['args']))->all(),
+                'file'      => $exception->getFile(),
+                'line'      => $exception->getLine(),
+                'trace'     => $trace->map(fn (array $trace): array     => Arr::except($trace, ['args']))->all(),
             ],
         ];
     }

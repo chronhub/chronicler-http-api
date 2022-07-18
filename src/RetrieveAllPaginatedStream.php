@@ -15,9 +15,9 @@ final class RetrieveAllPaginatedStream extends RetrieveWithQueryFilter
     {
         return $this->validation->make($request->all(), [
             'stream_name' => 'required|string',
-            'limit' => 'required|integer',
-            'direction' => 'required|string|in:asc,desc',
-            'offset' => 'integer|min:0|not_in:0',
+            'limit'       => 'required|integer',
+            'direction'   => 'required|string|in:asc,desc',
+            'offset'      => 'integer|min:0|not_in:0',
         ]);
     }
 

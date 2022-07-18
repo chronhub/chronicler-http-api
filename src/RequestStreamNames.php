@@ -9,6 +9,9 @@ use Chronhub\Chronicler\Chronicler;
 use Chronhub\Chronicler\StreamName;
 use Illuminate\Contracts\Validation\Factory;
 use Chronhub\Chronicler\Http\Api\Response\ResponseFactory;
+use function explode;
+use function array_map;
+use function array_filter;
 
 final class RequestStreamNames
 {
